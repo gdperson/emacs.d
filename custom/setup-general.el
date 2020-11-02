@@ -55,6 +55,7 @@
 
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 (windmove-default-keybindings)
 
 (global-linum-mode t)
