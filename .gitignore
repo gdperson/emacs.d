@@ -1,0 +1,9 @@
+/auto-save-list
+\#*
+/elpa
+/recentf
+*~
+*.log
+ede-projects.el
+projectile-bookmarks.eld
+/semanticdb
