@@ -57,12 +57,14 @@
 (use-package zygospore
   :bind (("C-x 1" . zygospore-toggle-delete-other-windows)
          ("RET" .   newline-and-indent)))
-
-  ; automatically indent when press RET
+                                        ; automatically indent when press RET
 
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "s-l") 'goto-line)
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 (windmove-default-keybindings)
 
 (global-linum-mode t)
