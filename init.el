@@ -26,6 +26,7 @@
 ;; (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
+(require 'setup-magit)
 
 ;; function-args
 (require 'function-args)
