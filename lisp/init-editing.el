@@ -40,56 +40,52 @@
 
 ;; Package: volatile-highlights
 ;; GROUP: Editing -> Volatile Highlights
-(require-package 'volatile-highlights)
+(maybe-require-package 'volatile-highlights)
 (volatile-highlights-mode t)
 
 ;; Package: undo-tree
 ;; GROUP: Editing -> Undo -> Undo Tree
-(require-package 'undo-tree)
+(maybe-require-package 'undo-tree)
 (global-undo-tree-mode 1)
 
 
 ;; Package: yasnippet
 ;; GROUP: Editing -> Yasnippet
 ;; Package: yasnippet
-(require-package 'yasnippet)
+(maybe-require-package 'yasnippet)
 (add-hook 'prog-mode-hook 'yas-minor-mode)
 
 ;; Package: clean-aindent-mode
-(require-package 'clean-aindent-mode)
+(maybe-require-package 'clean-aindent-mode)
  (add-hook 'prog-mode-hook 'clean-aindent-mode)
 
 ;; Package: dtrt-indent
-(require-package 'dtrt-indent)
+(maybe-require-package 'dtrt-indent)
 (dtrt-indent-mode 1)
 (setq dtrt-indent-verbosity 0)
 
 ;; Package: ws-butler
-(require-package 'ws-butler)
+(maybe-require-package 'ws-butler)
 (add-hook 'prog-mode-hook 'ws-butler-mode)
 (add-hook 'text-mode 'ws-butler-mode)
 (add-hook 'fundamental-mode 'ws-butler-mode)
 
 ;; PACKAGE: comment-dwim-2
-(require-package 'comment-dwim-2)
-(with-eval-after-load 'comment-dwim-2
-  :bind (("M-;" . comment-dwim-2))
-  )
+(maybe-require-package 'comment-dwim-2)
+(global-set-key (kbd "M-;") 'comment-dwim-2)
 
 ;; PACKAGE: anzu
 ;; GROUP: Editing -> Matching -> Isearch -> Anzu
-(require-package 'anzu)
-(with-eval-after-load 'anzu
-  (global-anzu-mode)
-  (global-set-key (kbd "M-%") 'anzu-query-replace)
-  (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp))
+(maybe-require-package 'anzu)
+(global-anzu-mode)
+(global-set-key (kbd "M-%") 'anzu-query-replace)
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
 
 ;; PACKAGE: iedit
-(require-package 'iedit)
-(with-eval-after-load 'iedit
-  :bind (("C-;" . iedit-mode))
-  :init
-  (setq iedit-toggle-key-default nil))
+(maybe-require-package 'iedit)
+(require 'iedit)
+(global-set-key (kbd "C-;") iedit-mode)
+(setq iedit-toggle-key-default nil)
 
 ;; Customized functions
 (defun prelude-move-beginning-of-line (arg)

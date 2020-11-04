@@ -32,7 +32,7 @@
  )
 
 ;; company
-(require-package 'company)
+(maybe-require-package 'company)
 (global-company-mode 1)
 (delete 'company-semantic company-backends)
 ;; (define-key c-mode-map  [(control tab)] 'company-complete)
@@ -43,24 +43,16 @@
 ;;   :init
 ;;   (projectile-global-mode)
 ;;   (setq projectile-enable-caching t))
-(require-package 'projectile)
-(with-eval-after-load 'projectile
-  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (projectile-mode +1))
-
-;; Package zygospore
-(require-package 'zygospore)
-(with-eval-after-load 'zygospore
-  :bind (("C-x 1" . zygospore-toggle-delete-other-windows)
-         ("RET" .   newline-and-indent)))
-                                        ; automatically indent when press RET
+(maybe-require-package 'projectile)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "s-l") 'goto-line)
-(require-package 'expand-region)
+(maybe-require-package 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (windmove-default-keybindings)
 
