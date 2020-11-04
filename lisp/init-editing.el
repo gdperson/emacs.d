@@ -40,58 +40,53 @@
 
 ;; Package: volatile-highlights
 ;; GROUP: Editing -> Volatile Highlights
-(use-package volatile-highlights
-  :init)
+(require-package 'volatile-highlights)
 (volatile-highlights-mode t)
 
 ;; Package: undo-tree
 ;; GROUP: Editing -> Undo -> Undo Tree
-(use-package undo-tree
-  :init
-  (global-undo-tree-mode 1))
+(require-package 'undo-tree)
+(global-undo-tree-mode 1)
 
 
 ;; Package: yasnippet
 ;; GROUP: Editing -> Yasnippet
 ;; Package: yasnippet
-(use-package yasnippet
-  :defer t
-  :init
-  (add-hook 'prog-mode-hook 'yas-minor-mode))
+(require-package 'yasnippet)
+(add-hook 'prog-mode-hook 'yas-minor-mode)
 
 ;; Package: clean-aindent-mode
-(use-package clean-aindent-mode
-  :init
-  (add-hook 'prog-mode-hook 'clean-aindent-mode))
+(require-package 'clean-aindent-mode)
+ (add-hook 'prog-mode-hook 'clean-aindent-mode)
 
 ;; Package: dtrt-indent
-(use-package dtrt-indent
-  :init
-  (dtrt-indent-mode 1)
-  (setq dtrt-indent-verbosity 0))
+(require-package 'dtrt-indent)
+(dtrt-indent-mode 1)
+(setq dtrt-indent-verbosity 0)
 
 ;; Package: ws-butler
-(use-package ws-butler
-  :init
-  (add-hook 'prog-mode-hook 'ws-butler-mode)
-  (add-hook 'text-mode 'ws-butler-mode)
-  (add-hook 'fundamental-mode 'ws-butler-mode))
+(require-package 'ws-butler)
+(add-hook 'prog-mode-hook 'ws-butler-mode)
+(add-hook 'text-mode 'ws-butler-mode)
+(add-hook 'fundamental-mode 'ws-butler-mode)
 
 ;; PACKAGE: comment-dwim-2
-(use-package comment-dwim-2
+(require-package 'comment-dwim-2)
+(with-eval-after-load 'comment-dwim-2
   :bind (("M-;" . comment-dwim-2))
   )
 
 ;; PACKAGE: anzu
 ;; GROUP: Editing -> Matching -> Isearch -> Anzu
-(use-package anzu
-  :init
+(require-package 'anzu)
+(with-eval-after-load 'anzu
   (global-anzu-mode)
   (global-set-key (kbd "M-%") 'anzu-query-replace)
   (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp))
 
 ;; PACKAGE: iedit
-(use-package iedit
+(require-package 'iedit)
+(with-eval-after-load 'iedit
   :bind (("C-;" . iedit-mode))
   :init
   (setq iedit-toggle-key-default nil))

@@ -1,7 +1,6 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
-(setq gc-cons-threshold 100000000)
 (setq inhibit-startup-message t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -33,10 +32,9 @@
  )
 
 ;; company
-(use-package company
-  :init
-  (global-company-mode 1)
-  (delete 'company-semantic company-backends))
+(require-package 'company)
+(global-company-mode 1)
+(delete 'company-semantic company-backends)
 ;; (define-key c-mode-map  [(control tab)] 'company-complete)
 ;; (define-key c++-mode-map  [(control tab)] 'company-complete)
 
@@ -45,16 +43,15 @@
 ;;   :init
 ;;   (projectile-global-mode)
 ;;   (setq projectile-enable-caching t))
-(use-package projectile
-  :ensure t
-  :pin melpa
-  :config
+(require-package 'projectile)
+(with-eval-after-load 'projectile
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
 
 ;; Package zygospore
-(use-package zygospore
+(require-package 'zygospore)
+(with-eval-after-load 'zygospore
   :bind (("C-x 1" . zygospore-toggle-delete-other-windows)
          ("RET" .   newline-and-indent)))
                                         ; automatically indent when press RET
@@ -63,9 +60,7 @@
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "s-l") 'goto-line)
-(use-package expand-region
-  :init)
-(require 'expand-region)
+(require-package 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (windmove-default-keybindings)
 

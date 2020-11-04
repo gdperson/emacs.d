@@ -1,5 +1,5 @@
-(use-package helm
-  :init
+(require-package 'helm)
+(with-eval-after-load 'helm
   (progn
     (require 'helm-config)
     (require 'helm-grep)
@@ -109,7 +109,8 @@
     ;; PACKAGE: helm-swoop                ;;
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;; Locate the helm-swoop folder to your path
-    (use-package helm-swoop
+    (require-package 'helm-swoop)
+    (with-eval-after-load 'helm-swoop
       :bind (("C-c h o" . helm-swoop)
              ("C-c s" . helm-multi-swoop-all))
       :config
@@ -132,11 +133,11 @@
       (setq helm-swoop-speed-or-color t))
 
     (helm-mode 1)
-
-    (use-package helm-projectile
-      :init
+    (maybe-require-package 'helm-projectile)
+    (with-eval-after-load 'helm-projectile
       (helm-projectile-on)
       (setq projectile-completion-system 'helm)
-      (setq projectile-indexing-method 'alien))))
+      (setq projectile-indexing-method 'alien))
+    ))
 
 (provide 'init-helm)
