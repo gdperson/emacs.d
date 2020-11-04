@@ -8,3 +8,5 @@ ede-projects.el
 projectile-bookmarks.eld
 /semanticdb
 bookmarks
+custom.el
+/transient

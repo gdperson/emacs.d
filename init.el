@@ -13,7 +13,8 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(add-to-list 'load-path "~/.emacs.d/custom")
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
 (require 'setup-path)
 (require 'setup-general)
@@ -29,21 +30,3 @@
 ;; function-args
 ;; (require 'function-args)
 ;; (fa-config-default)
-;; (define-key c-mode-map  [(tab)] 'company-complete)
-;; (define-key c++-mode-map  [(tab)] 'company-complete)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(helm-ag golden-ratio-scroll-screen ggtags function-args zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))
- '(safe-local-variable-values
-   '((company-clang-arguments "-I/Users/wanghui62/work/db/jimdb-old/jimdb-redis/src/"))))
- 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

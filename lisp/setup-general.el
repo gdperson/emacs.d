@@ -63,6 +63,8 @@
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "s-l") 'goto-line)
+(use-package expand-region
+  :init)
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (windmove-default-keybindings)
