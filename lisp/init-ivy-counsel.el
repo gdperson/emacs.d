@@ -22,4 +22,4 @@
   :init
   (counsel-projectile-mode))
 
-(provide 'setup-ivy-counsel)
+(provide 'init-ivy-counsel)

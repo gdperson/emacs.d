@@ -70,4 +70,4 @@
 (windmove-default-keybindings)
 
 (global-linum-mode t)
-(provide 'setup-general)
+(provide 'init-general)

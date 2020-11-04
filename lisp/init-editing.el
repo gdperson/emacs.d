@@ -256,4 +256,4 @@ Position the cursor at it's beginning, according to the current mode."
 (global-set-key (kbd "M-o") 'prelude-smart-open-line)
 (global-set-key (kbd "M-o") 'open-line)
 
-(provide 'setup-editing)
+(provide 'init-editing)

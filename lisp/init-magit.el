@@ -2,4 +2,4 @@
   :config
   (global-set-key (kbd "C-c m") 'magit-status))
 
-(provide 'setup-magit)
+(provide 'init-magit)

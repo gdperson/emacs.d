@@ -34,4 +34,4 @@
       (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
       (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history))))
 
-(provide 'setup-helm-gtags)
+(provide 'init-helm-gtags)

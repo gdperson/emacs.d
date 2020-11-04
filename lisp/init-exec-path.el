@@ -19,4 +19,4 @@
 ;; call function now
 (set-exec-path-from-shell-PATH)
 
-(provide 'setup-path)
+(provide 'init-exec-path)

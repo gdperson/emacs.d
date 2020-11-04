@@ -19,4 +19,4 @@
   (define-key map (kbd "C-c <") 'ggtags-prev-mark)
   (define-key map (kbd "C-c >") 'ggtags-next-mark))
 
-(provide 'setup-ggtags)
+(provide 'init-ggtags)
