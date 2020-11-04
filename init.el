@@ -1,8 +1,6 @@
 (require 'package)
-;; (add-to-list 'package-archives
-;;              '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 
 (package-initialize)
 
@@ -29,8 +27,8 @@
 (require 'setup-magit)
 
 ;; function-args
-(require 'function-args)
-(fa-config-default)
+;; (require 'function-args)
+;; (fa-config-default)
 ;; (define-key c-mode-map  [(tab)] 'company-complete)
 ;; (define-key c++-mode-map  [(tab)] 'company-complete)
 (custom-set-variables

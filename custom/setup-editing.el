@@ -41,8 +41,8 @@
 ;; Package: volatile-highlights
 ;; GROUP: Editing -> Volatile Highlights
 (use-package volatile-highlights
-  :init
-  (volatile-highlights-mode t))
+  :init)
+(volatile-highlights-mode t)
 
 ;; Package: undo-tree
 ;; GROUP: Editing -> Undo -> Undo Tree
