@@ -108,7 +108,7 @@
 ;; Locate the helm-swoop folder to your path
 (maybe-require-package 'helm-swoop)
 (require 'helm-swoop)
-(global-set-key (kbd "C-c h o") 'helm-swoop)
+(global-set-key (kbd "C-c o") 'helm-swoop)
 (global-set-key (kbd "C-c s") 'helm-multi-swoop-all)
 
 ;; When doing isearch, hand the word over to helm-swoop
