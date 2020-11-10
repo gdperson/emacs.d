@@ -21,6 +21,7 @@
 
 (require 'init-epla)
 (require 'init-exec-path)
+(require 'init-themes)
 (require 'init-general)
 (require 'init-windows)
 (require 'init-helm)
