@@ -33,3 +33,4 @@
 ;; function-args
 ;; (require 'function-args)
 ;; (fa-config-default)
+(put 'downcase-region 'disabled nil)
