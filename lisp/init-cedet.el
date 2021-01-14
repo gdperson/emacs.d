@@ -20,7 +20,9 @@
 
 (defun alexott/cedet-hook ()
   (local-set-key "\C-c\C-j" 'semantic-ia-fast-jump)
-  (local-set-key "\C-c\C-s" 'semantic-ia-show-summary))
+  (local-set-key "\C-c\C-s" 'semantic-ia-show-summary)
+  (local-set-key "\C-c\C-f" 'ff-find-other-file))
+
 (when *is-a-mac*
   (mac-sematic-hook)
   )

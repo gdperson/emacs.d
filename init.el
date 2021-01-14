@@ -30,7 +30,4 @@
 (require 'init-editing)
 (require 'init-magit)
 
-;; function-args
-;; (require 'function-args)
-;; (fa-config-default)
 (put 'downcase-region 'disabled nil)
