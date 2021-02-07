@@ -1,6 +1,7 @@
 ;; this variables must be set before load helm-gtags
 ;; you can change to any prefix key of your choice
 (setq helm-gtags-prefix-key "\C-cg")
+(maybe-require-package 'ggtags)
 (maybe-require-package 'helm-gtags)
 (require 'helm-gtags)
 (setq helm-gtags-ignore-case t
