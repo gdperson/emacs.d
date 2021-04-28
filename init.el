@@ -29,5 +29,6 @@
 (require 'init-cedet)
 (require 'init-editing)
 (require 'init-magit)
+(require 'init-youdao)
 
 (put 'downcase-region 'disabled nil)
