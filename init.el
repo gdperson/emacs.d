@@ -30,5 +30,6 @@
 (require 'init-editing)
 (require 'init-magit)
 (require 'init-youdao)
+(require 'init-python)
 
 (put 'downcase-region 'disabled nil)
