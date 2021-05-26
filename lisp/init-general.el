@@ -49,6 +49,8 @@
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-s") 'set-mark-command)
+(global-set-key (kbd "C-/") 'undo-tree-undo)
+(global-set-key (kbd "C-z") 'undo-tree-redo)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "s-l") 'goto-line)
 (maybe-require-package 'expand-region)
