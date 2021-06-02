@@ -8,16 +8,16 @@
 
 (semantic-mode 1)
 
-(defun gdperson:ac-c-header-init()
-  (maybe-require-package 'auto-complete)
-  (require 'auto-complete)
-  (require 'auto-complete-config)
-  (ac-config-default)
-  (maybe-require-package 'auto-complete-c-headers)
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include")
-  )
+;; (defun gdperson:ac-c-header-init()
+;;   (maybe-require-package 'auto-complete)
+;;   (require 'auto-complete)
+;;   (require 'auto-complete-config)
+;;   (ac-config-default)
+;;   (maybe-require-package 'auto-complete-c-headers)
+;;   (require 'auto-complete-c-headers)
+;;   (add-to-list 'ac-sources 'ac-source-c-headers)
+;;   (add-to-list 'achead:include-directories '"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include")
+;;   )
 
 (defun mac-sematic-hook ()
   (semantic-add-system-include "/usr/local/include" 'c-mode)
@@ -43,8 +43,8 @@
 (add-hook 'c-mode-common-hook 'alexott/cedet-hook)
 (add-hook 'c-mode-hook 'alexott/cedet-hook)
 (add-hook 'c++-mode-hook 'alexott/cedet-hook)
-(add-hook 'c-mode-hook 'gdperson:ac-c-header-init)
-(add-hook 'c++-mode-hook 'gdperson:ac-c-header-init)
+;; (add-hook 'c-mode-hook 'gdperson:ac-c-header-init)
+;; (add-hook 'c++-mode-hook 'gdperson:ac-c-header-init)
 
 ;; Enable EDE only in C/C++
 (require 'ede)
