@@ -32,7 +32,7 @@
  )
 
 ;; use-package
-(maybe-require-package 'use-package)
+;; (maybe-require-package 'use-package)
 
 ;; company
 (maybe-require-package 'company)
@@ -57,5 +57,22 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 (windmove-default-keybindings)
 
-(global-linum-mode t)
+(require 'display-line-numbers)
+
+(defcustom display-line-numbers-exempt-modes
+  '(vterm-mode eshell-mode shell-mode term-mode ansi-term-mode)
+  "Major modes on which to disable line numbers."
+  :group 'display-line-numbers
+  :type 'list
+  :version "green")
+
+(defun display-line-numbers--turn-on ()
+  "Turn on line numbers except for certain major modes.
+Exempt major modes are defined in `display-line-numbers-exempt-modes'."
+  (unless (or (minibufferp)
+              (member major-mode display-line-numbers-exempt-modes))
+    (display-line-numbers-mode)))
+
+(column-number-mode)
+(global-display-line-numbers-mode)
 (provide 'init-general)
