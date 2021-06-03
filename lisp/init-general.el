@@ -75,4 +75,11 @@ Exempt major modes are defined in `display-line-numbers-exempt-modes'."
 
 (column-number-mode)
 (global-display-line-numbers-mode)
+
+(require-package 'which-key)
+(use-package which-key
+  :init (which-key-mode)
+  :diminish which-key-mode
+  :config
+  (setq which-key-idle-delay 0.1))
 (provide 'init-general)
