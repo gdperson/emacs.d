@@ -32,7 +32,7 @@
  )
 
 ;; use-package
-;; (maybe-require-package 'use-package)
+(maybe-require-package 'use-package)
 
 ;; company
 (maybe-require-package 'company)
@@ -82,4 +82,8 @@ Exempt major modes are defined in `display-line-numbers-exempt-modes'."
   :diminish which-key-mode
   :config
   (setq which-key-idle-delay 0.1))
+
+(require-package 'rainbow-delimiters)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 (provide 'init-general)
