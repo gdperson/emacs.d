@@ -31,5 +31,6 @@
 (require 'init-magit)
 (require 'init-youdao)
 (require 'init-python)
+(require 'init-evil)
 
 (put 'downcase-region 'disabled nil)
