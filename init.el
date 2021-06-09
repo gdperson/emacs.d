@@ -23,6 +23,7 @@
 (require 'init-exec-path)
 (require 'init-themes)
 (require 'init-general)
+;; (require 'init-evil)
 (require 'init-windows)
 (require 'init-helm)
 (require 'init-helm-gtags)
@@ -31,6 +32,5 @@
 (require 'init-magit)
 (require 'init-youdao)
 (require 'init-python)
-(require 'init-evil)
 
 (put 'downcase-region 'disabled nil)
