@@ -55,6 +55,7 @@
 (global-set-key (kbd "s-l") 'goto-line)
 (maybe-require-package 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-M-b") 'scroll-other-window-down)
 
 (windmove-default-keybindings)
 
